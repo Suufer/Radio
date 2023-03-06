@@ -50,15 +50,4 @@ public class Radio {
         }
     }
 
-    public void increaseVolume() {
-        if (currentVolume < 10) {
-            currentVolume++;
-        }
-    }
-
-    public void decreaseVolume() {
-        if (currentVolume > 0) {
-            currentVolume--;
-        }
-    }
 }
