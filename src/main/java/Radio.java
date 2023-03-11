@@ -10,11 +10,9 @@ public class Radio {
         if (currentStation < 0) {
             return;
         }
-
         if (currentStation > 9) {
             return;
         }
-
         this.currentStation = currentStation;
     }
 
@@ -26,11 +24,9 @@ public class Radio {
         if (currentVolume < 0) {
             return;
         }
-
         if (currentVolume > 10) {
             return;
         }
-
         this.currentVolume = currentVolume;
     }
 
