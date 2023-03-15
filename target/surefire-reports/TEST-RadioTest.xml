@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="RadioTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="11" failures="0" name="RadioTest" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.3.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -66,12 +66,14 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="RadioTest" name="testNextStation" time="0.003"/>
+  <testcase classname="RadioTest" name="testParameterizedConstructor" time="0"/>
+  <testcase classname="RadioTest" name="testSetVolumeInvalid" time="0"/>
+  <testcase classname="RadioTest" name="testSetCurrentStationInvalid" time="0.001"/>
   <testcase classname="RadioTest" name="testIncreaseVolume" time="0"/>
   <testcase classname="RadioTest" name="testDecreaseVolume" time="0"/>
   <testcase classname="RadioTest" name="testPrevStation" time="0"/>
-  <testcase classname="RadioTest" name="testConstructorWithStationCount" time="0"/>
   <testcase classname="RadioTest" name="testSetVolume" time="0"/>
   <testcase classname="RadioTest" name="testSetCurrentStation" time="0"/>
-  <testcase classname="RadioTest" name="testIncreaseVolumeToMax" time="0"/>
+  <testcase classname="RadioTest" name="testSetMaxStation" time="0"/>
   <testcase classname="RadioTest" name="testDefaultConstructor" time="0"/>
 </testsuite>
