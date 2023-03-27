@@ -40,11 +40,6 @@ public class Radio {
         }
     }
 
-    public void decreaseVolume() {
-        if (volume > 0) {
-            volume--;
-        }
-    }
 
     public void nextStation() {
         if (currentStation == numberOfStations - 1) {

@@ -46,28 +46,12 @@ public class RadioTest {
     }
 
     @Test
-    public void testDecreaseVolume() {
-        Radio radio = new Radio();
-        radio.decreaseVolume();
-        assertEquals(0, radio.getVolume());
-    }
-
-    @Test
     public void testIncreaseVolumeBeyondMaximum() {
         Radio radio = new Radio();
         for (int i = 0; i < 101; i++) {
             radio.increaseVolume();
         }
         assertEquals(100, radio.getVolume());
-    }
-
-    @Test
-    public void testDecreaseVolumeBeyondMinimum() {
-        Radio radio = new Radio();
-        for (int i = 0; i < 101; i++) {
-            radio.decreaseVolume();
-        }
-        assertEquals(0, radio.getVolume());
     }
 
     @Test
