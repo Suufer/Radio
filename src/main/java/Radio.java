@@ -1,55 +1,37 @@
 public class Radio {
-    private final int MIN_STATION = 0;
-    private int maxStation;
+    private int numberOfStations;
     private int currentStation;
     private int volume;
 
     public Radio() {
-        this.maxStation = 10;
+        this.numberOfStations = 10;
         this.currentStation = 0;
         this.volume = 0;
     }
 
-    public Radio(int maxStation) {
-        this.maxStation = maxStation;
+    public Radio(int numberOfStations) {
+        this.numberOfStations = numberOfStations;
         this.currentStation = 0;
         this.volume = 0;
     }
 
-    public int getMaxStation() {
-        return maxStation;
-    }
-
-    public void setMaxStation(int maxStation) {
-        this.maxStation = maxStation;
+    public int getNumberOfStations() {
+        return numberOfStations;
     }
 
     public int getCurrentStation() {
         return currentStation;
     }
 
-    public void setCurrentStation(int currentStation) {
-        if (currentStation >= MIN_STATION && currentStation < maxStation) {
-            this.currentStation = currentStation;
+    public void setCurrentStation(int stationNumber) {
+        if (stationNumber < 0 || stationNumber >= numberOfStations) {
+            throw new IllegalArgumentException("Station number should be within 0 and " + (numberOfStations - 1));
         }
+        this.currentStation = stationNumber;
     }
 
     public int getVolume() {
         return volume;
-    }
-
-    public void setVolume(int volume) {
-        if (volume >= 0 && volume <= 100) {
-            this.volume = volume;
-        }
-    }
-
-    public void nextStation() {
-        currentStation = (currentStation + 1) % maxStation;
-    }
-
-    public void prevStation() {
-        currentStation = currentStation == 0 ? maxStation - 1 : currentStation - 1;
     }
 
     public void increaseVolume() {
@@ -63,4 +45,21 @@ public class Radio {
             volume--;
         }
     }
+
+    public void nextStation() {
+        if (currentStation == numberOfStations - 1) {
+            currentStation = 0;
+        } else {
+            currentStation++;
+        }
+    }
+
+    public void prevStation() {
+        if (currentStation == 0) {
+            currentStation = numberOfStations - 1;
+        } else {
+            currentStation--;
+        }
+    }
+
 }
